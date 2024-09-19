@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+  {% if not created    %}
+  <form action="" method="post">
+    {% csrf_token %}
+        {{forms.as_p}}
+        <button type="submit">submit</button>
+</form>
+  {%else%}
+<p>u created a book </p>
+<p>the title of the book is {{ object.title }}</p>
+<p>Back to   <a href="{% url 'all_book' %}">index</a> page </p>
+  {% endif %}
+</body>
+</html>

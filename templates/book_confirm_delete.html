@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Book</title>
+</head>
+<body>
+    <p>are u sur u want to delete this book " {{book.title}} "</p>
+
+        <form action="" method="post">
+                {% csrf_token %}
+                
+            {{book.title}}<br>
+            {{book.author}}<br>
+
+
+            <button type="submit">yes, delete</button>
+        </form>
+
+</body>
+</html>
